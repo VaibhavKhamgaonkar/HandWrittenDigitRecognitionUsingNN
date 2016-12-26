@@ -93,7 +93,7 @@ options = optimset('GradObj','on', 'MaxIter',400);
   % Evaluate z = theta*x over the grid
   for i = 1:length(u)
       for j = 1:length(v)
-          z(i,j) = ScaleFeatures([u(i), v(j)])*theta;
+          z(i,j) = ScaleFeatures([u(i), v(j)])*theta; % as ScaleFeatures taskes only one Argument i.e matrix thus u(i) and v(i) as club together.
       end
   end
   z = z'; % important to transpose z before calling contour
