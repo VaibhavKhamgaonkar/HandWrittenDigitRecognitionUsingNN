@@ -110,5 +110,5 @@ options = optimset('GradObj','on', 'MaxIter',400);
 
 accuricy = LogisticHyphothesis(X*theta);
 
-fprintf("Accuricy of the prediction is about \n:%f\n", mean(accuricy(y = 1)) * 100);  
+fprintf("Accuricy of the prediction is about \n:%f\n ", mean(accuricy(y = 1)) * 100);  
  
