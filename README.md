@@ -11,6 +11,6 @@ Note:
 
 3. It does not contain the Gradient chacking code yet. it is still under construction. It will get updated once finished 
 
+4. Two hand written images are also added to verify whether algortihm is working fine or not. you can use them to test the Algorithm.
 
-
-
+5. The code to check the new images is also included at the bottom of the file. make sure imgaes are also present in working directory
