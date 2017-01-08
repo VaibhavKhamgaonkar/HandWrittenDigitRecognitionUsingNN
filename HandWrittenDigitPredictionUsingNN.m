@@ -124,9 +124,9 @@ end
  % Function to predict the digit
 function [pred] = Prediction (Theta1,Theta2, X)
 	m = size(X,1);
-	outputLayerSize = size(Theat2,1);
+	outputLayerSize = size(Theta2,1);
 
-	h1 = sigmoid( [ones(m,1), X] * Theat1');
+	h1 = sigmoid( [ones(m,1), X] * Theta1');
 	h2 = sigmoid([ones(m,1), h1 ] * Theta2');
 
 	[max_value pred ] = max(h2, [], 2);
@@ -159,7 +159,13 @@ pred = Prediction(Theat1, Theta2, X);
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100); 
 
 
+% prediction for new data : two uages are attached which are hand written digit of 2 and 4
+test = imread('TestImg1.jpg');
+test =test(:)';
+test = double(test);
+prediction = Prediction(Theta1, Theta2, test);
 
+fprintf('predicted values is \n%f\n', prediction); 
 
 
 
