@@ -154,7 +154,7 @@ Theta2 = reshape(ThetaUnrolled((size(Theta1,1)*size(Theta1,2))+1:end), outputLay
 
 % finding the Accuracy in Training set
 
-pred = Prediction(Theat1, Theta2, X);
+pred = Prediction(Theta1, Theta2, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100); 
 
